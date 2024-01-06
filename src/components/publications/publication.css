@@ -1,0 +1,41 @@
+.image-container{
+    width:30rem;
+    height: 35rem;
+    overflow: hidden;
+    border-radius: 15rem 15rem 0  0;
+    border: 8px solid black;
+}
+.image-container>img{
+    width: 100%;
+    height:100%;
+}
+.p-container >div{
+    flex:1;
+}
+.p-right{
+    gap: 0.5rem;
+}
+.Accordion{
+    margin-top: 2rem;
+    border: none;
+}
+.accordionItem{
+    background: white;
+    border: 0.8px solid rgba(128,128,128,0.143);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.accordionButton{
+    background: black;
+    padding:1rem;
+    width: 100%;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.icon{
+    padding:10px;
+    background: #eeeeff;
+    border-radius: 5px;
+}
