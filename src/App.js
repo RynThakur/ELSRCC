@@ -1,8 +1,10 @@
 import React from 'react';
+import './app.css';
 import './index.css';
 import Header from './components/header/Header';
 import Hero from './components/hero/Hero';
 import About from './components/about/About';
+import Sponser from './components/Sponser/Sponser';
 import './app.css';
 import Publication from './components/publications/Publication';
 import Contact from './components/contacts/Contact';
@@ -21,6 +23,7 @@ function App() {
         <Router>
           <Header />
           <Hero />
+          <Sponser/>
           <About />
           <Publication />
           <Contact />

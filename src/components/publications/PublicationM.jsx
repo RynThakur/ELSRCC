@@ -103,17 +103,47 @@ const PublicationM = () => {
                 </div>
                 <div className="flexColStart pdfs">
             <div className="pdf-list ">
-              <PdfComponent pdfTitle="Trecento 16" pdfPath={pdf1} />
-              <PdfComponent pdfTitle="Trecento 17" pdfPath={pdf2} />
-              <PdfComponent pdfTitle="Trecento 18" pdfPath={pdf3} />
-              <PdfComponent pdfTitle="Trecento 19" pdfPath={pdf4} />
-              <PdfComponent pdfTitle="Trecento 20" pdfPath={pdf5} />
-              <PdfComponent pdfTitle="Trecento 21" pdfPath={pdf6} />
-              <PdfComponent pdfTitle="Trecento 22" pdfPath={pdf7} />
-              <PdfComponent pdfTitle="Trecento 23" pdfPath={pdf8} />
-              <PdfComponent pdfTitle="Trecento 24" pdfPath={pdf9} />
+              <PdfComponent pdfTitle="Trecento 16th - Freedom" pdfPath={pdf1} />
+              <PdfComponent pdfTitle="Trecento 17th - The Earth & Dreams" pdfPath={pdf2} />
+              <PdfComponent pdfTitle="Trecento 19th - The moments and memories of pain and happiness" pdfPath={pdf3} />
+              <PdfComponent pdfTitle="Trecento 21st - Journaling
+ " pdfPath={pdf4} />
+              <PdfComponent pdfTitle="Trecento 22nd - The stories of courage 
+ " pdfPath={pdf5} />
+              <PdfComponent pdfTitle="Trecento 23rd - Indian Mythology" pdfPath={pdf6} />
+              <PdfComponent pdfTitle="Trecento 24th - New Begginings" pdfPath={pdf7} />
+              <PdfComponent pdfTitle="Trecento 25th - War & Life " pdfPath={pdf8} />
+              <PdfComponent pdfTitle="Trecento 26th - Symphony of minds" pdfPath={pdf9} />
             </div>
                 </div>
+            </div>
+            <div className="paddings innerWidth bubbles">
+            <section className="z-wrapper">
+        <div id="zid" className="paddings innerWidth z-container">
+            <div className="flexColCenter inner-container">
+                <span className='primaryText'>BubbELS</span>
+                <span className='secondaryText'>ELS Bubble is a captivating venture by the English Literary Society that takes us on an enchanting voyage through a kaleidoscope of themes and emotions. With boundless creativity and passion for literature, our members curate theme-based posts that delve deep into the heart of various subjects.</span> 
+                <button className="button">
+                    <a href='https://www.instagram.com/p/Cz3ShAQRZDw/?utm_source=ig_web_copy_link'>BubbELS</a>
+                </button>  
+            </div>
+        </div>
+    </section>
+              
+            </div>
+            <div className="paddings innerWidth scribbels">
+            <section className="z-wrapper">
+        <div id="zid" className="paddings innerWidth z-container">
+            <div className="flexColCenter inner-container">
+                <span className='primaryText'>ScribbELS</span>
+                <span className='secondaryText'>In the vibrant month of April, the talented members of the English Literary Society took centre stage on our official page, embracing the freedom to exhibit their creativity with no limits. Thus, Scribbles was born, an enchanting platform where our brilliant poets and writers poured their hearts out on topics of self-love and toxic relationships. Each piece eloquently captures the essence of these emotions, leaving readers inspired and moved.</span> 
+                <button className="button">
+                    <a href='https://www.instagram.com/p/C0wNgGqR29f/?utm_source=ig_web_copy_link'>ScribbELS</a>
+                </button>  
+            </div>
+        </div>
+    </section>
+              
             </div>
         </div>
         

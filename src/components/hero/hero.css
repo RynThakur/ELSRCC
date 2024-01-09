@@ -86,17 +86,3 @@
         width: 100%;
     }
 }
-.c-container{
-    justify-content: space-around;
-    gap: 1rem;
-}
-.c-container>img{
-    width:9rem;
-}
-.c-container>img:hover{
-    transform: scale(1.1);
-}
-.c-container>h1{
-    color: white;
-    font-style: italic;
-}

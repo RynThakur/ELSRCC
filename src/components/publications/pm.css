@@ -3,6 +3,7 @@
     display: flex;
     justify-content: space-around; /* Adjust the justification as needed */
     flex-wrap: wrap; /* Wrap items onto the next line if they don't fit */
+    align-items: center;
   }
   
   .pdf-item {
@@ -21,4 +22,6 @@
   .pdf-item:hover {
     background-color: #e0e0e0; /* Adjust the hover background color as needed */
   }
+
+  
   

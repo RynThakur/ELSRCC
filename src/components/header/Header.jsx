@@ -1,12 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import { Theme } from 'pretty-format';
-import "./header.css"
+import "./header.css";
 import { BiMenuAltRight } from 'react-icons/bi';
-import OutsideClickHandler from "react-outside-click-handler"
-
-import{Drawer,
+import OutsideClickHandler from "react-outside-click-handler";
+import {
+  Drawer,
   DrawerBody,
   DrawerHeader,
   DrawerOverlay,
@@ -14,50 +13,75 @@ import{Drawer,
   DrawerCloseButton,
   Button,
   useDisclosure,
-  VStack} from'@chakra-ui/react';
-  import{BiMenu, BiMenuAltLeft} from "react-icons/bi";
+  VStack
+} from '@chakra-ui/react';
+import { BiMenu, BiMenuAltLeft } from "react-icons/bi";
 
 const Header = () => {
-  const [menuOpened, setMenuOpened]  = useState(false)
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   const getMenuStyles = (menuOpened) => {
-    if (document.documentElement.clientWidth <=800){
-      return {right: !menuOpened && "-100%"}
+    if (document.documentElement.clientWidth <= 800) {
+      return { right: !menuOpened && "-100%" };
     }
-  }
+  };
+
   return (
     <>
-    
-    {/*HEADER STARTS HERE-> */}
-    <section className='h-wrapper'>
-          <div className="flexCenter paddings innerWidth h-container">
-            
-            <img src={require("/Users/aryanthakur/Documents/els2/src/assets/ENGLISH LITERARY SOCIETY.png")}width={300}></img>
-            <OutsideClickHandler
-            onOutsideClick={()=> {
-              setMenuOpened(false)
-            }}
-            >
+      {/*HEADER STARTS HERE-> */}
+      <section className='h-wrapper'>
+        <div className="flexCenter paddings innerWidth h-container">
+          <img src={require("/Users/aryanthakur/Documents/els2/src/assets/ENGLISH LITERARY SOCIETY.png")} width={300} alt="ELS Logo" />
+          <OutsideClickHandler onOutsideClick={() => onClose()}>
             <div className='flexCenter h-menu'>
-             <Link to="/home">Home</Link>
+              <Link to="/home">Home</Link>
               <HashLink to="/about#aid">About</HashLink>
               <HashLink to="/publications#pid">Publication</HashLink>
               <HashLink to="/zephyr#zid">Zephyr</HashLink>
               <HashLink to={"/sreo#sid"}>SREO</HashLink>
               <button className='button'>
-              <HashLink to='/contact#cid'>Contact</HashLink>
+                <HashLink to='/contact#cid'>Contact</HashLink>
               </button>
             </div>
-            </OutsideClickHandler>
-            <div className="menu-icon" onClick={()=>setMenuOpened((prev)=>!prev)}>
-            <BiMenuAltRight size={30}/>
+          </OutsideClickHandler>
+          <div className="menu-icon" onClick={onOpen}>
+            <BiMenuAltRight size={30} />
           </div>
-          </div>
+        </div>
+      </section>
 
-        </section>
-        
-  
+      <Drawer placement="right" onClose={onClose} isOpen={isOpen}>
+        <DrawerOverlay>
+          <DrawerContent>
+            <DrawerCloseButton />
+            <DrawerHeader></DrawerHeader>
+            <DrawerBody>
+              <VStack spacing="2rem">
+                <Link to="/home" onClick={onClose}>
+                  Home
+                </Link>
+                <HashLink to="/about#aid" onClick={onClose}>
+                  About
+                </HashLink>
+                <HashLink to="/publications#pid" onClick={onClose}>
+                  Publication
+                </HashLink>
+                <HashLink to="/zephyr#zid" onClick={onClose}>
+                  Zephyr
+                </HashLink>
+                <HashLink to={"/sreo#sid"} onClick={onClose}>
+                  SREO
+                </HashLink>
+                <HashLink to='/contact#cid' onClick={onClose}>
+                  Contact
+                </HashLink>
+              </VStack>
+            </DrawerBody>
+          </DrawerContent>
+        </DrawerOverlay>
+      </Drawer>
     </>
   );
-}; 
+};
 
 export default Header;

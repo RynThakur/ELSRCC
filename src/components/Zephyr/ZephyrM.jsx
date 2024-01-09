@@ -48,9 +48,9 @@ const ZephyrM = () => {
   return (
     
     <section className="zm-wrapper">
-      <div id="zid" className="paddings innerWidth zm-container">
+      <div className="paddings innerWidth zm-container">
         <div className="flexColStart zm-headings">
-          <span className="primaryText">ZEPHYR</span>
+          <span id="zid" className="primaryText">ZEPHYR</span>
           <span className="orangeText">2023</span>
           <div className="flexColStart zm-content">
             <p className="secondaryText">

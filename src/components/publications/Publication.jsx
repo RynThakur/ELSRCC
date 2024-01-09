@@ -21,7 +21,7 @@ const Publication = () => {
             {/*left side*/}
             <div className="p-left">
                 <div className="image-container">
-                    <img src={require("/Users/aryanthakur/Documents/els2/src/assets/du.jpg")}></img>
+                    <img src={require("/Users/aryanthakur/Documents/els2/src/assets/ptsrcc.jpeg")}></img>
                 </div>
             </div>
             {/**right-side */}

@@ -33,7 +33,7 @@ const MailInput = () => {
         placeholder="Enter your email"
       />
       <button className="button" onClick={handleRegister}>
-        Register
+        Subscribe to Trecento!
       </button>
     </div>
   );
