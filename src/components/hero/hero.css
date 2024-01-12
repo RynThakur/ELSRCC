@@ -1,38 +1,44 @@
-.hero-wrapper{
-    color:white;
-    position:relative;
-    padding-bottom:2rem;
-   
+.hero-wrapper {
+  color: white;
+  position: relative;
+  padding-bottom: 2rem;
+  padding-top: 15rem; /* Adjust this value based on your header's height */
 }
-.hero-container{
-    justify-content: space-between;
-    align-items: flex-end;
+
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
-/*video-container*/
-.video-container{
-     width: 40rem;
-     height: 35rem;
-     overflow: visible;
-     opacity: 100%;
-}
-.video-container>video{
-    /*object-fit*/
+  
+  .video-container {
+    width: 40rem;
+    height: 35rem;
+    overflow: visible;
+    opacity: 100%;
+  }
+  
+  .video-container>video {
     height: 100%;
-    width: 100;
-}
-.hero-left{
-    gap:3rem;
-}
-.hero-title{
+    width: 100%;
+  }
+  
+  .hero-left {
+    gap: 3rem;
+  }
+  
+  .hero-title {
     position: relative;
     z-index: 1;
-}
-.hero-title>h1{
+  }
+  
+  .hero-title>h1 {
     font-weight: 600;
     font-size: 3.8rem;
     line-height: 4rem;
-}
-.circle{
+  }
+  
+  .circle {
     height: 4rem;
     width: 4rem;
     background: linear-gradient(97.05deg, rgb(230, 197, 11) 3.76%, orange 100%);
@@ -41,48 +47,63 @@
     z-index: -1;
     border-radius: 999px;
     position: absolute;
-}
-.mail{
+  }
+  
+  .mail {
     background-color: white;
-    border-radius:5px ;
-    border: 3px solid rgba(120,120,120,0.374);
+    border-radius: 5px;
+    border: 3px solid rgba(120, 120, 120, 0.374);
     padding: 0.5rem 1rem;
     justify-content: space-between;
-    
-}
-.mail>input{
+  }
+  
+  .mail>input {
     border: none;
-    outline:none;
-}
-.stats{
+    outline: none;
+  }
+  
+  .stats {
     width: 50%;
     justify-content: space-between;
-
-}
-.stat>:nth-child(1){
+  }
+  
+  .stat>:nth-child(1) {
     font-size: 2rem;
-}
-.stat>:nth-child(1)>:last-child{
-    
-    color:orange
-}
-@media (max-width: 640px){
-    .hero-container{
-        margin-top: 2rem;
+  }
+  
+  .stat>:nth-child(1)>:last-child {
+    color: orange;
+  }
+  
+  @media (max-width: 768px) {
+    .hero-container {
+      flex-direction: column;
+      align-items: center;
     }
-    .hero-title{
-        font-size: 2.5rem;
-        line-height: 3rem;
+  
+    .hero-title>h1 {
+      font-size: 2.5rem;
+      line-height: 3rem;
     }
-    .video-container{
-        width: 95%;
-        height: 25rem;
+  
+    .video-container {
+      width: 95%;
+      height: 25rem;
     }
-    .stats{
-        justify-content: center;
-        gap:1.5rem;
+  
+    .stats {
+      width: 100%;
+      justify-content: center;
+      gap: 1.5rem;
     }
-    .hero-right{
-        width: 100%;
+  
+    .hero-right {
+      width: 100%;
+      margin-top: 2rem;
     }
-}
+  }
+  
+  @media (max-width: 360px) and (max-height: 740px) {
+    /* Add specific styles for 360x740 screen size if needed */
+  }
+  

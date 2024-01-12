@@ -1,62 +1,55 @@
 .c-container {
-    justify-content: space-around;
-    gap: 0.5rem;
-    background-color: black;
+  justify-content: space-around;
+  gap: 0.5rem;
+  background-color: black;
+}
+
+.sponsor-logos {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+      transform: translateX(100%);
   }
-  
+  100% {
+      transform: translateX(-100%); /* Adjust to the width of your logos */
+  }
+}
+
+.sponsor-logos > img {
+  max-width: 100px; /* Set the maximum width */
+  max-height: 100px; /* Set the maximum height */
+  width: auto; /* Maintain aspect ratio */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.c-container > h1 {
+  color: #cccccc;
+  font-style: italic;
+}
+
+@media (min-width: 768px) {
   .sponsor-logos {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-  
-  .sponsor-logos > img {
-    width: auto; /* Remove fixed width and set individual widths below */
-  }
-  
-  .sponsor-logos > img:nth-child(1) {
-    width: 130px; /* Red FM logo */
-  }
-  
-  .sponsor-logos > img:nth-child(2) {
-    width: 150px; /* CORNITOS logo */
-  }
-  
-  .sponsor-logos > img:nth-child(3) {
-    width: 100px; /* BeReal logo */
-  }
-  
-  .sponsor-logos > img:nth-child(4) {
-    width: 120px; /* FACE logo */
-  }
-  
-  .sponsor-logos > img:hover {
-    transform: scale(1.1rem);
-  }
-  
-  .c-container > h1 {
-    color: #cccccc;
-    font-style: italic;
-  }
-  @media (min-width: 768px) {
-    .sponsor-logos {
       gap: 1rem;
-    }
   }
-  
-  @media (max-width: 767px) {
-    .sponsor-logos {
+}
+
+@media (max-width: 767px) {
+  .sponsor-logos {
       gap: 0.75rem;
-    }
   }
-  
-  @media (max-width: 576px) {
-    .sponsor-logos {
+}
+
+@media (max-width: 576px) {
+  .sponsor-logos {
       flex-wrap: wrap;
       gap: 0.5rem;
-    }
-    .sponsor-logos > img {
-      width: 45%; 
-    }
   }
-    
+  .sponsor-logos > img {
+      width: 45%;
+  }
+}

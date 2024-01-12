@@ -1,40 +1,54 @@
 .f-container {
-    color: white;
-    justify-content: space-between;
-    border-top: 0.5px solid rgba(0, 0, 0, 0.14);
-    display: flex; /* Add this for responsiveness */
-  }
-  
-  /* Responsive Spacing */
-  .f-left {
-    gap: 1rem;
-  }
-  
-  @media (max-width: 768px) {
-    .f-left {
-      gap: 0.5rem; /* Adjust for smaller screens */
-    }
-  }
-  
-  /* Menu */
+  color: white;
+  justify-content: space-between;
+  border-top: 0.5px solid rgba(0, 0, 0, 0.14);
+  display: flex; /* Add this for responsiveness */
+  gap: 1rem; /* Adjust spacing between items */
+}
+
+/* Responsive Spacing */
+.f-left {
+  gap: 1rem;
+}
+
+/* Menu */
+.f-menu {
+  gap: 1.5rem;
+  margin-top: 1.5em;
+  font-weight: 500;
+  color: white;
+  display: flex; /* Add this for responsiveness */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.f-menu :hover {
+  cursor: pointer;
+  color: orange;
+}
+
+/* Responsive Font Size */
+@media (max-width: 576px) {
   .f-menu {
-    gap: 1.5rem;
-    margin-top: 1.5em;
-    font-weight: 500;
-    color: white;
-    display: flex; /* Add this for responsiveness */
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    font-size: 0.9rem; /* Reduce font size on mobile */
   }
-  
-  .f-menu :hover {
-    cursor: pointer;
-    color: orange;
-  }
-  
-  /* Responsive Font Size */
-  @media (max-width: 576px) {
-    .f-menu {
-      font-size: 0.9rem; /* Reduce font size on mobile */
-    }
-  }
-  
+}
+
+.designedBy {
+  text-align: center;
+  margin-top: 1rem;
+  color: #cccccc;
+  font-style: italic;
+}
+
+.designedBy button {
+  color: #cccccc;
+  text-decoration: underline;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.designedBy button:hover {
+  color: orange;
+}

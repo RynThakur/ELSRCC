@@ -14,6 +14,7 @@ import ZephyrM from './components/Zephyr/ZephyrM';
 import PublicationM from './components/publications/PublicationM';
 import Sreo from './components/Sreo/Sreo';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import SREO2 from './components/Sreo/Sreo2';
 function App() {
   return (
     <div className="App">
@@ -25,9 +26,10 @@ function App() {
           <Hero />
           <Sponser/>
           <About />
-          <Publication />
-          <Contact />
           <Zephyr />
+          <Publication />
+          <SREO2/>
+          <Contact />
           <Routes>
             <Route path="/zephyrM" element={<ZephyrM />} />
             <Route path="/publicationM" element={<PublicationM/>} />

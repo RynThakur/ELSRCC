@@ -1,42 +1,68 @@
-.image-container{
-    width:30rem;
+.p-container {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .image-container {
+    width: 30rem;
     height: 35rem;
     overflow: hidden;
-    border-radius: 15rem 15rem 0  0;
+    border-radius: 15rem 15rem 0 0;
     border: 8px solid black;
-    
-}
-.image-container>img{
+  }
+  
+  .image-container > img {
     width: 100%;
-    height:100%;
-}
-.p-container >div{
-    flex:1;
-}
-.p-right{
+    height: 100%;
+  }
+  
+  .p-container > div {
+    flex: 1;
+  }
+  
+  .p-right {
     gap: 0.5rem;
-}
-.Accordion{
+  }
+  
+  .Accordion {
     margin-top: 2rem;
     border: none;
-}
-.accordionItem{
+  }
+  
+  .accordionItem {
     background: white;
-    border: 0.8px solid rgba(128,128,128,0.143);
+    border: 0.8px solid rgba(128, 128, 128, 0.143);
     border-radius: 8px;
     overflow: hidden;
     margin-bottom: 20px;
-}
-
-.accordionButton{
+  }
+  
+  .accordionButton {
     background: black;
-    padding:1rem;
+    padding: 1rem;
     width: 100%;
     justify-content: space-between;
     cursor: pointer;
-}
-.icon{
-    padding:10px;
+  }
+  
+  .icon {
+    padding: 10px;
     background: #eeeeff;
     border-radius: 5px;
-}
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .image-container {
+      display: none; /* Hide the image on smaller screens */
+    }
+  
+    .p-container {
+      flex-direction: column; /* Change the flex direction to column on smaller screens */
+    }
+  
+    .accordionItem {
+      margin-bottom: 10px;
+    }
+  }
+  

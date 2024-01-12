@@ -1,4 +1,5 @@
 import React from 'react';
+import { Spacer } from "@chakra-ui/react";
 import "./hero.css";
 import { RiMailLine } from 'react-icons/ri';
 import CountUp from 'react-countup';
@@ -64,6 +65,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
+        <Spacer height="18rem" />
       </section>
     </>
   )

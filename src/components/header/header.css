@@ -1,89 +1,117 @@
-
-.h-wrapper{
- 
-   color:white; 
-}
-.h-wrapper h1 {
-    font-size:25px;
-    font-weight: bold;
-    font-family: 'kanit', 'sans-serif';
-    font-style: italic;
-}
-.h-container{
-    justify-content: space-between;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-}
-.h-menu{
-    gap:2rem;
-}
-.h-menu :hover{
-    cursor: pointer;
-    color:orange;
-}
-.menu-icon{
-    display: none;
+* {
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@media (max-width:768px) {
-    .menu-icon{
-        display: block;
-    }
-    .h-menu{
-        color: white;
-        position: absolute;
-        top:3rem;
-        right:4rem;
-        background-color: black;
-        flex-direction: column;
-        font-weight: 500;
-        gap:2rem;
-        padding:3rem;
-        border-radius: 10px;
-        align-items: flex-start;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
-        transition: all 300ms ease-in;
-    }
-    
+.h-wrapper {
+  color: white;
+  position: fixed;
+  width: 100%;
+  background-color: black;
+  transition: background-color 0.5s ease-in-out;
+  z-index: 1000;
+  overflow: hidden; /* Ensure the pseudo-element doesn't overflow */
+  /* Add a pseudo-element for the gradient overlay */
+  &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgba(255, 255, 255, 0.2), black);
+      filter: blur(230px);
+      z-index: -1;
+  }
 }
 
-/* Your existing CSS */
+
+.h-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.logo-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.h-menu {
+  display: flex;
+  gap: 2rem;
+}
+
+.h-menu a,
+.h-menu button {
+  color: white;
+  text-decoration: none;
+  &:hover {
+    color: orange;
+  }
+}
+
+.menu-icon {
+  display: none;
+}
+
+/* Add padding to the top of your content */
+.content-container {
+  padding-top: 5rem; /* Adjust this value based on your header's height */
+}
 
 @media (max-width: 768px) {
-    .menu-icon {
-      display: block;
-    }
-    .h-menu {
-      display: none;
-    }
-  
-    .h-container {
-      position: relative;
-    }
-  
-    .h-menu {
-      color: white;
-      position: absolute;
-      top: 3rem;
-      right: 4rem;
-      background-color: black;
-      flex-direction: column;
-      font-weight: 500;
-      gap: 2rem;
-      padding: 3rem;
-      border-radius: 10px;
-      align-items: flex-start;
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
-      transition: all 300ms ease-in;
-    }
-  
-    .h-menu a,
-    .h-menu button {
-      color: black;
-      &:hover {
-        color: orange;
-      }
+  .menu-icon {
+    display: block;
+    order: 3;
+    cursor: pointer;
+  }
+
+  .h-menu {
+    display: none;
+    position: absolute;
+    top: 4rem;
+    right: 1rem;
+    background-color: black;
+    flex-direction: column;
+    font-weight: 500;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+    transition: all 300ms ease-in;
+    order: 2;
+  }
+
+  .h-menu a,
+  .h-menu button {
+    color: white;
+    &:hover {
+      color: orange;
     }
   }
-  
 
+  .h-wrapper.scrolled .h-menu {
+    top: 5rem;
+  }
+
+  /* Adjust padding for smaller screens */
+  .content-container {
+    padding-top: 6rem; /* Adjust this value based on your header's height */
+  }
+}
+
+@media (max-width: 576px) {
+  .h-container {
+    padding: 0.5rem;
+  }
+}

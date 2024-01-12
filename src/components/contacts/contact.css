@@ -67,4 +67,36 @@
       display: none;
     }
   }
+/* Add the following CSS at the end of your existing CSS file */
+
+@media (max-width: 768px) {
+    .c-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .c-left {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+  
+    .c-right {
+      width: 100%;
+    }
+  
+    .contactModes {
+      margin-top: 2rem;
+      gap: 1rem;
+    }
+  
+    .contactModes .row {
+      gap: 1.5rem;
+    }
+  
+    .mode {
+      width: 100%;
+    }
+  }
+  
+  
   

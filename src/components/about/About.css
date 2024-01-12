@@ -1,59 +1,87 @@
-.a-container{
+.a-container {
     overflow: hidden;
     position: relative;
-}
-.a-head{
-    color:white;
-     margin-bottom: 2rem;
-
-}
-.a-card{
-    gap:0.6rem;
+  }
+  
+  .a-head {
+    color: white;
+    margin-bottom: 2rem;
+  }
+  
+  .a-card {
+    gap: 0.6rem;
     padding: 1rem;
     border-radius: 10px;
-    max-width: max-content;
+    max-width: 45rem;
     margin: auto;
     transition: all 200ms ease-in;
-
-}
-.a-card>img{
-    width: 120%;
-    max-width: 45rem;
-}
-.a-card:hover{
-    scale: 1.025;
+    position: relative;
+  }
+  
+  .a-card > img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .a-card:hover {
+    transform: scale(1.025);
     cursor: pointer;
-    background:  linear-gradient(
-        180deg,
-        rgba(255,255,255,0) 0%,
-        rgba(255,165,0,0.46) 217.96%
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 165, 0, 0.46) 217.96%
     );
     box-shadow: 0px 72px 49px -51px rgba(255, 165, 0, 0.21);
-}
-.a-button{
+  }
+  
+  .a-button {
     position: absolute;
+    top: 70%; /* Adjusted the top position */
+    transform: translateY(-50%);
+    display: flex;
     gap: 1rem;
-    top: -4rem;
-    right: 0;
-
-}
-.a-button button{
+    right: 1rem;
+    z-index: 1;
+  }
+  
+  .a-button button {
     font-size: 1.2rem;
     padding: 0.2rem 0.8rem;
-    color:orange;
+    color: rgba(255, 165, 0, 0.8); /* Adjusted the color for translucency */
     border: none;
     border-radius: 5px;
-    background-color: white;
+    background-color: rgba(255, 255, 255,1); /* Adjusted the background for translucency */
     cursor: pointer;
-}
-.content{
-    color:white;
-   font-size: 18px;
-   line-height: 1.6;
-   text-align: justify;
-   margin-bottom: 20px;
-   text-shadow: orange;
-}
-.a{
-    color:white;
-}
+  }
+  
+  .content {
+    color: white;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .a-card {
+      max-width: 100%;
+    }
+  
+    .a-head {
+      font-size: 1.5rem;
+    }
+  
+    .content {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .a-button {
+      top: auto;
+      bottom: 1rem;
+      transform: translateY(0%);
+    }
+  }
+  

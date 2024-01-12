@@ -31,13 +31,15 @@ const Header = () => {
       {/*HEADER STARTS HERE-> */}
       <section className='h-wrapper'>
         <div className="flexCenter paddings innerWidth h-container">
-          <img src={require("/Users/aryanthakur/Documents/els2/src/assets/ENGLISH LITERARY SOCIETY.png")} width={300} alt="ELS Logo" />
+        <div className="logo-container">
+          <img src={require("/Users/aryanthakur/Documents/els2/src/assets/logof.png")} width={300} alt="ELS Logo" />
+          </div>
           <OutsideClickHandler onOutsideClick={() => onClose()}>
             <div className='flexCenter h-menu'>
               <Link to="/home">Home</Link>
               <HashLink to="/about#aid">About</HashLink>
-              <HashLink to="/publications#pid">Publication</HashLink>
               <HashLink to="/zephyr#zid">Zephyr</HashLink>
+              <HashLink to="/publications#pid">Publication</HashLink>
               <HashLink to={"/sreo#sid"}>SREO</HashLink>
               <button className='button'>
                 <HashLink to='/contact#cid'>Contact</HashLink>
